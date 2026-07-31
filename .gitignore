@@ -1,0 +1,85 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+*.orig
+
+# editor / IDE settings (local-only; keeps personal config out of the published template)
+.vscode/
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+/.claude/settings.local.json
+/.claude/preferences.json
+# Session logging is retired
+/.claude/logs/
+# Transient workflow state files (agent-to-agent communication, not committed)
+/generated-docs/context/
+
+# Generated dashboard (regenerable via /dashboard)
+generated-docs/dashboard.html
+generated-docs/dashboard-data.json
+
+# Every generated report — pages, data files, the authored panels and the team name —
+# regenerable via any /build-report-* command, so the whole folder is ignored
+generated-docs/reports/
+
+# Local report input: gate-run history, appended by quality-gates.js on every run
+# during the build — a local fact, not project content
+generated-docs/quality-gate-runs.jsonl
+
+# Reports written at the top level before they moved into reports/. Still ignored so a
+# project that upgrades doesn't surface its old pages as untracked files; nothing writes
+# here any more, and the team name is re-asked once on the first report run.
+generated-docs/build-report*.html
+generated-docs/build-report-data.json
+generated-docs/build-report-insights*.md
+generated-docs/build-report-decisions.json
+generated-docs/report-meta.json
+
+# Generated review pages (regenerable at each approval — review-and-hand-back, never committed)
+generated-docs/epic-plan-review.html
+generated-docs/epics/**/stories-review.html
+generated-docs/epics/**/manual-tests.html
+
+# Playwright artifacts
+web/test-results/
+web/playwright-report/
+web/playwright/.cache/
+web/blob-report/
+
+# SpecStory tool artifacts (CLI config and usage stats are local-only)
+/.specstory/cli/
+/.specstory/statistics.json
+
+# Windows artifacts
+nul
