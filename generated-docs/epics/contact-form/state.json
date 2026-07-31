@@ -7,14 +7,16 @@
     "dependsOn": [],
     "introducesSharedSurface": false,
     "unverifiedAssumptions": [],
-    "manualTestResults": []
+    "manualTestResults": [
+      { "story": 1, "passed": true }
+    ]
   },
-  "phase": "BUILD",
+  "phase": "COMPLETE-ON-BRANCH",
   "stories": {
     "1": {
       "status": "complete",
       "commit": null,
-      "e2eStatus": "deferred",
+      "e2eStatus": "passed",
       "startedAt": "2026-07-31T05:46:44Z",
       "completedAt": "2026-07-31T05:49:36Z"
     }
