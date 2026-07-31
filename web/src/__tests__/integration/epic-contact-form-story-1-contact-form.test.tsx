@@ -74,13 +74,4 @@ describe('Contact form (home page)', () => {
     // No confirmation while the email is malformed.
     expect(screen.queryByText(/thanks.*be in touch/i)).not.toBeInTheDocument();
   });
-
-  // DELIBERATE FAILURE — trips the CI Testing gate for the broken-run check.
-  // This whole test is reverted immediately after we confirm the PR blocks the merge.
-  it('DELIBERATE CI-GATE FAILURE — remove after broken-run test', () => {
-    render(<HomePage />);
-    expect(screen.getByRole('button', { name: /submit/i })).toHaveTextContent(
-      'This confirmation text intentionally does not exist',
-    );
-  });
 });
